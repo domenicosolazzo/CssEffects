@@ -1,9 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>CSS Effects</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/effects.css" />
 </head>
 <body>
+<nav>
+    <ul>
+        <li><a href="#">CSS3</a></li>
+        <li><a href="#css3-webkit">CSS3 (WebKit)</a></li>
+    </ul>
+</nav>
+<div id="wrapper">
+    <header>
+        <h1>CSS Effects</h1>
+    </header>
+    <section id="css3-webkit">
+        <header><h2>CSS3 Webkit</h2></header>
+        <article id="tiltshift">
+            <header>
+                <h3>Tilt Shift</h3>
+            </header>
+            <div class="content">
+                <p> Example text</p>
+                <details>
+                    <summary>Code</summary>
+                    <pre>
+                            #tiltshift .content p {
+                                font-size: 10em;
+                                color: #fff;
+                                text-transform: uppercase;
+                                letter-spacing: 0.05em;
+                                text-shadow:    #ccc 0 0 10px;
+                            }
 
+                            #tiltshift .content:hover p {
+                                color: transparent;
+                                -webkit-transform: rotate(6.5deg) rotateX(28deg) skewX(-4deg);
+                                        -moz-transform:  rotate(6.5deg);
+                                -webkit-transition: -webkit-transform .1s ease-out;
+                            }
+                            #tiltshift .content:hover p:nth-child(1) {
+                                font-size: 9em;
+                                text-shadow:    #fff 0 0 10px,
+                                                #fff 0 4px 3px, #eee 0 9px 3px,  #ddd 0 12px 1px,
+                                                rgba(0,0,0,0.2) 0 14px 5px;
+                                text-indent: 0.2em;
+                            }
+                        </pre>
+                </details>
+
+            </div>
+        </article>
+    </section>
+    <footer>
+
+    </footer>
+</div>
 </body>
 </html>
